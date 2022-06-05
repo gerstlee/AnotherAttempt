@@ -1,0 +1,308 @@
+/* Подключение шрифтов */
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/roboto.woff2") format("woff2"),
+      url("../fonts/roboto.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Roboto";
+    src: url("../fonts/robotobold.woff2") format("woff2"),
+      url("../fonts/robotobold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Roboto";
+    src: url("../fonts/robotomedium.woff2") format("woff2"),
+      url("../fonts/robotomedium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  /* Кастомные свойства -цвета */
+  
+  :root {
+    --basic-white: #ffffff;
+    --basic-white-rgb: 255, 255, 255;
+    --basic-black: #000000;
+    --basic-black-rgb: 0, 0, 0;
+    --basic-black-l: #231f20;
+    --basic-black-light: #283136;
+    --basic-grey-dark: #444444;
+    --basic-grey-dark-rgb: 68, 68, 68;
+    --basic-grey--dark-l: #4d4d4d;
+    --basic-grey: #666666;
+    --basic-grey-ld: #c1c1c1;
+    --basic-grey-light-l: #dbdbdb;
+    --basic-grey-light: #e1e1e1;
+    --basic-grey-extra-light: #eeeeee;
+    --basic-grey-modal: #d7dcde;
+    --special-grey-active: #a6a6a6;
+    --special-grey-hover: #dfdfdf;
+    --special-grey-hover-modal: #b4b9bb;
+    --special-grey-active-catalog: #d5d5d5;
+    --special-grey-active-range: #ababab;
+    --basic-red: #fb565a;
+    --special-red-hover: #e74246;
+    --special-red-active: #d7373b;
+    --basic-green: #00ca74;
+    --special-green-hover: #00bc6c;
+    --special-green-active: #00aa62;
+    --basic-yellow: #efc849;
+    --special-yellow-hover: #eab534;
+    --special-yellow-active: #e5a722;
+  }
+
+/*Основное*/
+
+.page_body {
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'Roboto';
+    color: #000000;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.a_container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.button {
+    width: 240px;
+    height: 50px;
+    background: #FB565A;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 17px 54px;
+    border-radius: 6px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 112%;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+}
+
+.button:hover {
+    background: #E74246;
+}
+
+.button:active {
+    background: #D7373B;
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    color: rgba(var(--basic-white-rgb), 0.3);
+}
+
+a {
+    text-decoration: none;
+}
+
+.list {
+    list-style: none;
+}
+
+.visually_hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/*Header*/
+
+.logo {
+    width: 160px; 
+    height: 66px;
+    margin-top: 48px;
+    margin-bottom: 5px;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.logo:active {
+    opacity: 0.3;
+}
+
+.main_header {
+    display: grid;
+    grid-template-columns: 160px 1fr 115px;
+    column-gap: 40px;
+    background-color: var(--basic-grey-extra-light);
+    padding: 0 140px;
+}
+
+.site_nav_list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 73px;
+    margin-bottom: 27px;
+}
+
+.site_nav_item {
+    padding-right: 45px;
+}
+
+.site_nav_item:last-child() {
+    padding-right: 0px;
+}
+
+.site_nav_link {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 187%;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.cart {
+    margin-top: 73px;
+    margin-bottom: 27px;
+    justify-self: end;
+    display: block;
+    position: relative;
+}
+
+.cart::before {
+    background-image: url("../img/cart-icon.svg");
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 15px;
+    right: 100px;
+}
+
+.cart_link {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 187%;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.site_nav_link:hover,
+.cart_link:hover {
+    color: #FB565A;
+    transition: 0.3s;
+}
+
+.site_nav_link:active,
+.cart_link:active {
+    mix-blend-mode: normal;
+    opacity: 0.3;
+}
+
+/*Promo*/
+
+.promo_container {
+    background-color: var(--basic-grey-extra-light);
+    margin-bottom: 80px;
+    margin-top: 0;
+}
+
+.promo {
+    width: 1129px;
+    min-height: 413px;
+    padding: 0 140px;
+    position: relative;
+}
+
+.slide1 {
+    background: url(../img/nerds-index-slide1-1.png)
+    no-repeat right 2px top -19px;
+}
+
+.slide2 {
+    background: url(../img/nerds-index-slide2-1.png)
+    no-repeat right 2px top -19px;
+}
+
+.slide3 {
+    background: url(../img/nerds-index-slide3-1.png)
+    no-repeat right 2px top -19px;
+}
+
+.slide1_butt {
+    display: flex;
+}
+
+.promo_title {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 100%;
+    margin: 0;
+    margin-bottom: 26px;
+    width: 538px;
+    padding-top: 58px;
+}
+
+.promo_text {
+    line-height: 150%;
+    color: #283136;
+    margin: 0;
+    margin-bottom: 38px;
+    width: 416px;
+}
+
+.slider_button {
+    content: "";
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    padding: 0;
+    background-color: var(--basic-white);
+    border: 2px solid var(--basic-white);
+    box-sizing: border-box;
+    position: relative;
+}
+
+.slider_button:not(.current-btn) {
+    cursor: pointer;
+  }
+
+.slider_button_current::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+  border: 2px solid var(--basic-grey-ld);
+  box-sizing: border-box;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 4.5px;
+  right: 4.5px;
+}
+
+.slider_buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 88px;
+    position: absolute;
+    bottom: 96px;
+    right: 675px;
+}
