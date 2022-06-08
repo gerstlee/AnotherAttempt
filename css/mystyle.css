@@ -3,30 +3,30 @@
 @font-face {
     font-family: "Roboto";
     src: url("../fonts/roboto.woff2") format("woff2"),
-      url("../fonts/roboto.woff") format("woff");
+        url("../fonts/roboto.woff") format("woff");
     font-weight: 400;
     font-style: normal;
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: "Roboto";
     src: url("../fonts/robotobold.woff2") format("woff2"),
-      url("../fonts/robotobold.woff") format("woff");
+        url("../fonts/robotobold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: "Roboto";
     src: url("../fonts/robotomedium.woff2") format("woff2"),
-      url("../fonts/robotomedium.woff") format("woff");
+        url("../fonts/robotomedium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
-  }
-  
-  /* Кастомные свойства -цвета */
-  
-  :root {
+}
+
+/* Кастомные свойства -цвета */
+
+:root {
     --basic-white: #ffffff;
     --basic-white-rgb: 255, 255, 255;
     --basic-black: #000000;
@@ -56,7 +56,7 @@
     --basic-yellow: #efc849;
     --special-yellow-hover: #eab534;
     --special-yellow-active: #e5a722;
-  }
+}
 
 /*Основное*/
 
@@ -131,7 +131,7 @@ a {
 /*Header*/
 
 .logo {
-    width: 160px; 
+    width: 160px;
     height: 66px;
     margin-top: 48px;
     margin-bottom: 5px;
@@ -235,18 +235,15 @@ a {
 }
 
 .slide1 {
-    background: url(../img/nerds-index-slide1-1.png)
-    no-repeat right 0px top -19px;
+    background: url(../img/nerds-index-slide1-1.png) no-repeat right 0px top -19px;
 }
 
 .slide2 {
-    background: url(../img/nerds-index-slide2-1.png)
-    no-repeat right 0px top -19px;
+    background: url(../img/nerds-index-slide2-1.png) no-repeat right 0px top -19px;
 }
 
 .slide3 {
-    background: url(../img/nerds-index-slide3-1.png)
-    no-repeat right 0px top -19px;
+    background: url(../img/nerds-index-slide3-1.png) no-repeat right 0px top -19px;
 }
 
 .slide1_butt {
@@ -285,19 +282,19 @@ a {
 
 .slider_button:not(.current-btn) {
     cursor: pointer;
-  }
+}
 
 .slider_button_current::after {
-  content: "";
-  width: 8px;
-  height: 8px;
-  background-color: transparent;
-  border: 2px solid var(--basic-grey-ld);
-  box-sizing: border-box;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 4.5px;
-  right: 4.5px;
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    border: 2px solid var(--basic-grey-ld);
+    box-sizing: border-box;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 4.5px;
+    right: 4.5px;
 }
 
 .slider_buttons {
@@ -478,13 +475,13 @@ a {
     height: 40px;
     top: -30px;
     left: 78px;
-  }
+}
 
- .percent_text {
+.percent_text {
     font-weight: 400;
     font-size: 16px;
     line-height: 112%;
-} 
+}
 
 .percent_item {
     margin-right: 22px;
@@ -494,11 +491,10 @@ a {
 .percent_item:nth-child(3) {
     width: 112px;
     margin-right: 0;
-  }
+}
 
 .info_visual {
-    background: url(../img/nerds-illustration-1.jpg)
-    no-repeat;
+    background: url(../img/nerds-illustration-1.jpg) no-repeat;
     background-position: 0 39px;
     padding-top: 286px;
 }
@@ -536,15 +532,15 @@ a {
     background-color: var(--basic-grey-extra-light);
     position: absolute;
     top: -40px;
-  }
+}
 
 .logos_wrap::after {
-  content: "";
-  width: 1158px;
-  height: 2px;
-  background-color: var(--basic-grey-extra-light);
-  position: absolute;
-  bottom: -28px;
+    content: "";
+    width: 1158px;
+    height: 2px;
+    background-color: var(--basic-grey-extra-light);
+    position: absolute;
+    bottom: -28px;
 }
 
 .logos_list_wrap:not(:nth-child(4n))::after {
@@ -558,54 +554,55 @@ a {
 
 .logos_item {
     opacity: 0.2;
-  }
-  
-  .logos_item:hover {
+}
+
+.logos_item:hover {
     opacity: 1;
-  }
-  
-  .logos_item:active {
+}
+
+.logos_item:active {
     opacity: 0.1;
-  }
+}
 
-  /*Map*/
+/*Map*/
 
-  .modal_map {
+.modal_map {
     height: 416px;
     position: relative;
-  }
+}
 
-  .footer_wrap {
+.footer_wrap {
     display: grid;
     grid-template-columns: 400px 1fr;
     column-gap: 40px;
     margin: 40px 100px;
-  }
+}
 
-  .offer_title {
+.offer_title {
     font-weight: 700;
     font-size: 36px;
     line-height: 100%;
     color: #000000;
     margin-bottom: 0px;
-  }
+}
 
-  .offer_text {
+.offer_text {
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
     color: #444444;
     margin-bottom: 45px;
-  }
+}
 
-  .contacts_list {
-      width: 268px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-  }
+.contacts_list {
+    margin-top: 30px;
+    width: 268px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
-  .contacts_butt {
+.contacts_butt {
     background-color: var(--basic-grey-light);
     display: flex;
     align-items: center;
@@ -614,4 +611,4 @@ a {
     height: 81px;
     box-sizing: border-box;
     border-radius: 50%;
-  }
+}
