@@ -61,7 +61,7 @@
 /*Основное*/
 
 .page_body {
-    min-width: 1200px;
+    min-width: 1160px;
     margin: 0;
     padding: 0;
     min-height: 100%;
@@ -73,10 +73,10 @@
     line-height: 24px;
 }
 
-.a_container {
+.container {
     max-width: 1160px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 100px;
 }
 
 .button {
@@ -146,11 +146,15 @@ a {
 }
 
 .main_header {
-    display: grid;
-    grid-template-columns: 160px 1fr 115px;
-    column-gap: 40px;
     background-color: var(--basic-grey-extra-light);
-    padding: 0 140px;
+    padding: 0 100px;
+    margin: 0;
+}
+
+.main_nav_container {
+    display: grid;
+    grid-template-columns: 230px 1fr 115px;
+    column-gap: 40px;
 }
 
 .site_nav_list {
@@ -221,7 +225,6 @@ a {
 /*Promo*/
 
 .promo_container {
-    background-color: var(--basic-grey-extra-light);
     margin-bottom: 80px;
     margin-top: 0;
 }
@@ -229,23 +232,22 @@ a {
 .promo {
     width: 1129px;
     min-height: 413px;
-    padding: 0 140px;
     position: relative;
 }
 
 .slide1 {
     background: url(../img/nerds-index-slide1-1.png)
-    no-repeat right 2px top -19px;
+    no-repeat right 10px top -19px;
 }
 
 .slide2 {
     background: url(../img/nerds-index-slide2-1.png)
-    no-repeat right 2px top -19px;
+    no-repeat right 10px top -19px;
 }
 
 .slide3 {
     background: url(../img/nerds-index-slide3-1.png)
-    no-repeat right 2px top -19px;
+    no-repeat right 10px top -19px;
 }
 
 .slide1_butt {
@@ -311,7 +313,6 @@ a {
 /*Features*/
 
 .features {
-    padding: 0 140px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 98px;
@@ -510,16 +511,9 @@ a {
 
 /*Info logos*/
 
-.logos_item {
-    mix-blend-mode: normal;
-    opacity: 0.2;
-}
-
 .logos_wrap {
     margin-bottom: 84px;
-}
-
-.logos_list {
+    margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -528,7 +522,7 @@ a {
 
 .logos_list_wrap {
     width: 260px;
-    height: 100%;
+    height: 90px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -536,12 +530,41 @@ a {
     position: relative;
 }
 
-.logos_list::before,
-.logos_list::after {
+.logos_wrap::before {
+    content: "";
+    width: 1158px;
+    height: 2px;
+    background-color: var(--basic-grey-extra-light);
+    position: absolute;
+    top: -40px;
+  }
+
+.logos_wrap::after {
   content: "";
   width: 1158px;
   height: 2px;
   background-color: var(--basic-grey-extra-light);
   position: absolute;
-  bottom: -4px;
+  bottom: -28px;
 }
+
+.logos_list_wrap:not(:nth-child(4n))::after {
+    content: "";
+    width: 2px;
+    height: 52px;
+    background-color: var(--basic-grey-extra-light);
+    position: absolute;
+    left: 280px;
+}
+
+.logos_item {
+    opacity: 0.2;
+  }
+  
+  .logos_item:hover {
+    opacity: 1;
+  }
+  
+  .logos_item:active {
+    opacity: 0.1;
+  }
