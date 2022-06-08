@@ -574,3 +574,44 @@ a {
     height: 416px;
     position: relative;
   }
+
+  .footer_wrap {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    column-gap: 40px;
+    margin: 40px 100px;
+  }
+
+  .offer_title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    color: #000000;
+    margin-bottom: 0px;
+  }
+
+  .offer_text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #444444;
+    margin-bottom: 45px;
+  }
+
+  .contacts_list {
+      width: 268px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+
+  .contacts_butt {
+    background-color: var(--basic-grey-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 81px;
+    height: 81px;
+    box-sizing: border-box;
+    border-radius: 50%;
+  }
