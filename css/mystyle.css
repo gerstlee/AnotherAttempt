@@ -348,15 +348,7 @@ a {
     background: #FB565A;
 }
 
-/*Info*/
-
-.info_title {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 45px;
-    line-height: 100%;
-    margin-bottom: 30px;
-}
+/*Info container*/
 
 .info_subtitle {
     font-weight: 700;
@@ -366,32 +358,77 @@ a {
     color: #283136;
 }
 
-.info_visual_title {
-    text-align: center;
-    margin: 0px;
-    margin-bottom: 31px;
+
+.info_container {
+    margin-bottom: 49px;
+    position: relative;
 }
 
-.info_text1 {
-    margin-bottom: 40px;
+/* .info_container {
+    min-width: 1174px;
+    min-height: 711px;
+    padding: 0 140px;
+    padding-top: 75px;
+} */
+
+.info_container::before {
+    content: "";
+    width: 1158px;
+    height: 2px;
+    background-color: var(--basic-grey-extra-light);
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
+.info_container::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.0001);
+    width: 1160px;
+    height: 2px;
+    color: #00000000;
+    position: absolute;
+    top: 15px;
+}
+
+.about_us {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    column-gap: 40px;
+}
+
+.info_desc {
+    padding-top: 75px;
+}
+
+/*Info 1st column*/
+
+.info_title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 100%;
+    margin-bottom: 38px;
+    margin: 0;
 }
 
 .info_text {
     color: #283136;
-    line-height: 100%;
+    margin-bottom: 41px;
+    line-height: 24px;
+    margin-top: 38px;
 }
 
 .info_list {
     color: #283136;
-    list-style: none;
     margin-bottom: 78px;
-    margin-left: 0px;
+    margin-top: 38px;
 }
 
 .info_list_item {
-    margin-bottom: 38px;
     position: relative;
-    padding-left: 0px;
+    padding-left: 18px;
+    margin-bottom: 38px;
 }
 
 .info_list_item:last-child {
@@ -404,14 +441,23 @@ a {
     height: 2px;
     background: #FB565A;
     position: absolute;
-    top: 10px;
+    top: 8.5px;
+    left: 7px;
+}
+
+/*Info 2nd column*/
+
+.info_visual_title {
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 31px;
 }
 
 .percentage {
     font-weight: 700;
     font-size: 45px;
     line-height: 22%;
-    margin-top: 61px;
+    margin-top: 71px;
     position: relative;
     width: 78px;
     height: 30px;
@@ -430,57 +476,31 @@ a {
     position: absolute;
     width: 20px;
     height: 40px;
-    top: 4px;
+    top: -30px;
     left: 78px;
   }
 
-.percent_text {
+ .percent_text {
     font-weight: 400;
     font-size: 16px;
     line-height: 112%;
-}
+} 
 
 .percent_item {
     margin-right: 22px;
     width: 98px;
 }
 
-.percent_item:last-child {
+.percent_item:nth-child(3) {
     width: 112px;
     margin-right: 0;
-}
-
-.logos {
-    mix-blend-mode: normal;
-    opacity: 0.2;
-}
-
-.info_container {
-    min-width: 1174px;
-    min-height: 711px;
-    padding: 0 140px;
-    padding-top: 75px;
-}
-
-.info_container::before {
-    content: "";
-    background-color: rgba(0, 0, 0, 0.0001);
-    width: 1160px;
-    height: 2px;
-    color: #00000000;
-    position: absolute;
-
-}
-
-.about_us {
-    display: flex;
-}
+  }
 
 .info_visual {
     background: url(../img/nerds-illustration-1.jpg)
     no-repeat;
-    background-position: 0 5px;
-    padding-top: 220px;
+    background-position: 0 39px;
+    padding-top: 286px;
 }
 
 .info_visual_percent {
@@ -488,10 +508,40 @@ a {
     flex-wrap: wrap;
 }
 
-.divide {
-    content: "";
-    color: #00000000;
-    background-color: rgba(0, 0, 0, 0.0001);
-    width: 1160px;
-    height: 2px;
+/*Info logos*/
+
+.logos_item {
+    mix-blend-mode: normal;
+    opacity: 0.2;
+}
+
+.logos_wrap {
+    margin-bottom: 84px;
+}
+
+.logos_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logos_list_wrap {
+    width: 260px;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.logos_list::before,
+.logos_list::after {
+  content: "";
+  width: 1158px;
+  height: 2px;
+  background-color: var(--basic-grey-extra-light);
+  position: absolute;
+  bottom: -4px;
 }
