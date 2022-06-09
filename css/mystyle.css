@@ -222,53 +222,40 @@ a {
     opacity: 0.3;
 }
 
-/*Promo*/
+/*Slider*/
 
-.promo_container {
+.slider_container {
     margin-bottom: 80px;
     margin-top: 0;
-}
-
-.promo {
     min-height: 413px;
     position: relative;
 }
 
-.slide1 {
-    background: url(../img/nerds-index-slide1-1.png) no-repeat right 0px top -19px;
+.slider_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.slide2 {
-    background: url(../img/nerds-index-slide2-1.png) no-repeat right 0px top -19px;
+.slide {
+    display: none;
 }
 
-.slide3 {
-    background: url(../img/nerds-index-slide3-1.png) no-repeat right 0px top -19px;
+.slide_current {
+    display: block;
 }
 
-.slide1_butt {
+.slider_controls {
+    position: absolute;
+    width: 91px;
+    z-index: 20;
     display: flex;
+    justify-content: space-between;
+    left: 605px;
+    top: 312px;
 }
 
-.promo_title {
-    font-weight: 500;
-    font-size: 55px;
-    line-height: 100%;
-    margin: 0;
-    margin-bottom: 26px;
-    width: 538px;
-    padding-top: 58px;
-}
-
-.promo_text {
-    line-height: 150%;
-    color: #283136;
-    margin: 0;
-    margin-bottom: 38px;
-    width: 416px;
-}
-
-.slider_button {
+.slider_controls button {
     content: "";
     width: 21px;
     height: 21px;
@@ -277,14 +264,11 @@ a {
     background-color: var(--basic-white);
     border: 2px solid var(--basic-white);
     box-sizing: border-box;
+    cursor: pointer;
     position: relative;
 }
 
-.slider_button:not(.current-btn) {
-    cursor: pointer;
-}
-
-.slider_button_current::after {
+.button_current::after {
     content: "";
     width: 8px;
     height: 8px;
@@ -297,13 +281,33 @@ a {
     right: 4.5px;
 }
 
-.slider_buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 88px;
-    position: absolute;
-    bottom: 96px;
-    right: 675px;
+.slider_title {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 100%;
+    margin: 0;
+    width: 538px;
+    padding-top: 58px;
+}
+
+.slider_text {
+    color: #283136;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    margin-top: 0px;
+}
+
+.slider_container_1 {
+    background: url(../img/nerds-index-slide1-1.png) no-repeat right 20px top 0px;
+}
+
+.slider_container_2 {
+    background: url(../img/nerds-index-slide2-1.png) no-repeat right 20px top 0px;
+}
+
+.slider_container_3 {
+    background: url(../img/nerds-index-slide3-1.png) no-repeat right 20px top 0px;
 }
 
 /*Features*/
@@ -360,13 +364,6 @@ a {
     margin-bottom: 49px;
     position: relative;
 }
-
-/* .info_container {
-    min-width: 1174px;
-    min-height: 711px;
-    padding: 0 140px;
-    padding-top: 75px;
-} */
 
 .info_container::before {
     content: "";
