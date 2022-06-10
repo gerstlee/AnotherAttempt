@@ -46,7 +46,7 @@
         </header>
         <main class="container catalog_container">
             <section class="filter_container">
-                <h2>Фильтр товаров</h2>
+                <h2 class="visually_hidden">Фильтр товаров</h2>
                 <form method="get" action="catalog.html">
                     <fieldset>
                         <legend>Стоимость:</legend>
@@ -97,27 +97,52 @@
                 </form> 
             </section>
             <section class="products_container">
-                <h2>Продукция</h2>
+                <h2 class="visually_hidden">Продукция</h2>
                 <div class="sorting">
                     <p class="sorting_title">Сортировать:</p>
-                    <ul class="sorting_list">
-                        <li class="sorting item">По цене</li>
-                        <li class="sorting item">По типу</li>
-                        <li class="sorting item">По названию</li>
+                    <ul class="sorting_list list">
+                        <li class="sorting_item">
+                            <a href="#">По цене</a>
+                        </li>
+                        <li class="sorting_item">
+                            <a href="#">По типу</a>
+                        </li>
+                        <li class="sorting_item">
+                            <a href="#">По названию</a></li>
                     </ul>
+                    <div class="triangles">
+                        <a href="#" class="triangle_item">
+                            <img src="img\DownIcon.svg" alt="down">
+                        </a>
+                        <a href="#" class="triangle_item">
+                            <img src="img\UpIcon.svg" alt="up">
+                        </a>
+                    </div>
                 </div>
                 <div class="products">
-                    <ul class="products_list">
-                        <li class="products_item">1</li>
-                        <li class="products_item">2</li>
-                        <li class="products_item">3</li>
-                        <li class="products_item">4</li>
-                        <li class="products_item">5</li>
-                        <li class="products_item">6</li>
+                    <ul class="products_list list">
+                        <li class="products_item">
+                            <img class="products_img" src="img\img-sedona-1.jpg" alt="Седона">
+                        </li>
+                        <li class="products_item">
+                            <img class="products_img" src="img\img-pink-1.jpg" alt="Пинк">
+                        </li>
+                        <li class="products_item">
+                            <img class="products_img" src="img\img-barbershop-1.jpg" alt="Бородинский">
+                        </li>
+                        <li class="products_item">
+                            <img class="products_img" src="img\img-mishka-1.jpg" alt="Мишка">
+                        </li>
+                        <li class="products_item">
+                            <img class="products_img" src="img\img-aplus-1.jpg" alt="Аплюс">
+                        </li>
+                        <li class="products_item">
+                            <img class="products_img" src="img\img-kvast-1.jpg" alt="Квас">
+                        </li>
                     </ul>
                 </div>
                 <div class="pagination">
-                    <ul class="pagination_list">
+                    <ul class="pagination_list list">
                         <li class="pagintaion_item">
                             <a href="#">1</a>
                         </li>
