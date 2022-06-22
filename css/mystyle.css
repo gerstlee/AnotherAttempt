@@ -113,6 +113,7 @@ a {
 
 .list {
     list-style: none;
+    padding-left: 0;
 }
 
 .visually_hidden {
