@@ -86,7 +86,7 @@
     display: inline-block;
     box-sizing: border-box;
     padding: 17px 54px;
-    border-radius: 6px;
+    border-radius: 3px;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -95,6 +95,9 @@
     text-transform: uppercase;
     margin-bottom: 80px;
     cursor: pointer;
+    vertical-align: middle;
+    border: none;
+    text-align: center;
 }
 
 .button:hover {
